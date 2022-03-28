@@ -11,3 +11,9 @@
 
   <RouterView />
 </template>
+
+<style>
+h1 {
+  border-bottom: 1px solid #ccc;
+}
+</style>

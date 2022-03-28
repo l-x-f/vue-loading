@@ -1,24 +1,22 @@
 <template>
   <div class="about">
-    <h1 v-loading="loading">This is an about page</h1>
+    <h1 v-loading="loading">false -> true</h1>
+    <h1 v-loading="false">false</h1>
+    <h1 v-loading="true">true</h1>
+    <h1 v-loading="loading1">true-> false</h1>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-const loading = ref(true)
+const loading = ref(false)
 setTimeout(() => {
-  loading.value = false
+  loading.value = true
+}, 2000)
+
+const loading1 = ref(true)
+setTimeout(() => {
+  loading1.value = false
 }, 2000)
 </script>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
